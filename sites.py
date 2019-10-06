@@ -44,7 +44,6 @@ class AkaAcid(FontSite):
             for fd in fonts_divs:
 
                 font_script_url = self.base_url + fd.contents[1].attrs['src']
-                print(font_script_url)
                 r = session.get(font_script_url)
                 font_html = re.findall('\w*.html', r.text)[0]
 
